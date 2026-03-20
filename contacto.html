@@ -1,0 +1,25 @@
+<section>
+    <h2>Contacto</h2>
+
+    <form id="form">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+emailjs.init("TU_PUBLIC_KEY");
+
+document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.send("service_id","template_id",{
+        message: "Mensaje desde Multitool"
+    }).then(()=>{
+        alert("Mensaje enviado");
+    });
+});
+</script>
