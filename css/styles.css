@@ -41,3 +41,14 @@ nav a {
     color: white;
     text-decoration: none;
 }
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
